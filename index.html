@@ -1,0 +1,57 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="src/styles.css" />
+	</head>
+	<body>
+		<div class="container weather-app">
+			<div class="row">
+				<div class="col-4">
+					<h1>Atlanta</h1>
+					<ul>
+						<li>Friday 05:00</li>
+						<li>Sunrise: 06:00</li>
+						<li>Sunset: 18:00</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<p>12 °C | °F</p>
+				</div>
+				<div class="col-4">
+					<p>Clear Sky</p>
+					<img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sunny" />
+					<ul>
+						<li>Humidity: 29% Wind Speed: 7 km/h</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row forecast">
+				<div class="col-2 4">
+					<small id="forecast-one"> 13:00 </small>
+				</div>
+				<div class="col-2 4">
+					<small id="forecast-two"> 16:00 </small>
+				</div>
+				<div class="col-2 4">
+					<small id="forecast-three"> 19:00 </small>
+				</div>
+				<div class="col-2 4">
+					<small id="forecast-four"> 22:00 </small>
+				</div>
+				<div class="col-2 4">
+					<small id="forecast-five"> 01:00 </small>
+				</div>
+			</div>
+			<small> Open Source Code by Summer Robinson </small>
+		</div>
+		<script src="src/app.js"></script>
+	</body>
+</html>
