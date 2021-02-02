@@ -17,3 +17,7 @@ li {
 footer {
 	text-align: center;
 }
+
+.search {
+	display: inline;
+}
