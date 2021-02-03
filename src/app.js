@@ -1,3 +1,7 @@
+function searchCity(event) {
+	event.preventDefault();
+}
+
 function showTemperature(response) {
 	console.log(response.data);
 	document.querySelector(".temperature").innerHTML = Math.round(

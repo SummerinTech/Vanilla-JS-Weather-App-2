@@ -13,6 +13,7 @@ h1 {
 	top: 0.9px;
 	padding: 10px 14px;
 	background: #f3a8b3;
+	color: white;
 	opacity: 0.8;
 }
 
@@ -23,6 +24,8 @@ ul {
 
 li {
 	list-style: none;
+	color: teal;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 small {
@@ -47,6 +50,7 @@ small {
 }
 
 .forecast {
+	color: white;
 	text-align: center;
 	padding: 20px;
 }
@@ -54,12 +58,14 @@ small {
 .temperature {
 	position: relative;
 	font-size: 64px;
+	color: white;
 	font-weight: 400;
 	line-height: 1;
 	right: 20px;
 }
 
 .weather-temp small {
+	color: teal;
 	position: relative;
 	font-size: 16px;
 	top: -58px;
@@ -113,14 +119,18 @@ small {
 
 .open-source {
 	text-decoration: none;
-	color: ;
+	color: teal;
 }
 
 #f {
 	text-decoration: none;
+	color: teal;
 }
 
 #description {
 	margin: 0;
 	text-transform: capitalize;
+	font-size: 24px;
+	color: white;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
