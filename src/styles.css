@@ -3,7 +3,6 @@ h1 {
 	color: white;
 	font-size: 46px;
 	bottom: 20px;
-	right: 10px;
 	margin: 0;
 	padding: 0;
 }
@@ -11,9 +10,9 @@ h1 {
 .current-city {
 	position: relative;
 	left: 20px;
-	bottom: 0.6px;
+	top: 0.9px;
 	padding: 10px 14px;
-	background: palevioletred;
+	background: #f3a8b3;
 	opacity: 0.8;
 }
 
@@ -26,23 +25,29 @@ li {
 	list-style: none;
 }
 
-footer {
+small {
 	text-align: center;
+	display: block;
+	margin: 0 auto;
 }
 
 .weather-app {
-	background: pink;
+	background-image: linear-gradient(
+		to top,
+		#ff9a9e 0%,
+		#fecfef 99%,
+		#fecfef 100%
+	);
 	max-width: 600px;
 	display: block;
 	margin: 20 auto;
 	padding: 20px;
-	border: 1px solid gray;
+	border: 1px solid white;
 	border-radius: 20px;
 }
 
 .forecast {
 	text-align: center;
-	margin-left: 45px;
 	padding: 20px;
 }
 
@@ -59,11 +64,12 @@ footer {
 }
 
 .main-content {
-	padding: 30px;
+	text-align: center;
+	padding: 30px 10px 10px;
 }
 
 .search {
-	background-color: palevioletred;
+	background-color: #f3a8b3;
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
@@ -88,7 +94,6 @@ footer {
 .date {
 	position: relative;
 	bottom: 20px;
-	left: 15px;
 	font-size: 16px;
 }
 
@@ -100,7 +105,12 @@ footer {
 
 .main-img {
 	display: block;
-	margin: 0;
+	margin: 0 auto;
+}
+
+.open-source {
+	text-decoration: none;
+	color: ;
 }
 
 #f {
