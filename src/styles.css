@@ -52,15 +52,18 @@ small {
 }
 
 .temperature {
+	position: relative;
 	font-size: 64px;
 	font-weight: 400;
 	line-height: 1;
+	right: 20px;
 }
 
 .weather-temp small {
 	position: relative;
 	font-size: 16px;
-	top: -32px;
+	top: -58px;
+	left: 20px;
 }
 
 .main-content {
