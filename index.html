@@ -9,6 +9,7 @@
 			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
 			crossorigin="anonymous"
 		/>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<link rel="stylesheet" href="src/styles.css" />
 	</head>
 	<body>
@@ -18,45 +19,53 @@
 					<div class="row">
 						<div class="col-6">
 							<input
-								class="form-control"
+								class="form-control input-search"
 								type="search"
 								autocomplete="off"
 								placeholder="Type your city..."
 							/>
 						</div>
 						<div class="col-2">
-							<input class="form-control" type="submit" value="Search" />
+							<input
+								class="form-control search btn btn-primary"
+								type="Submit"
+								value="Search"
+							/>
 						</div>
 						<div class="col-4">
-							<button class="btn btn-primary">Current City</button>
+							<button class="btn btn-primary current-city">Current City</button>
 						</div>
 					</div>
 				</form>
+				<div class="main-content">
+					<div class="row">
+						<div class="col-4 left-align">
+							<h1>Atlanta</h1>
+							<ul>
+								<li><span class="date">Friday 05:00</span></li>
+								<!-- <li><span class="sunrise">Sunrise 06:00 </span></li>
+								<li><span class="sunset">Sunset 18:00</span></li> -->
+							</ul>
+						</div>
+						<div class="col-4 weather-temp">
+							<p>
+								<span class="temperature">12 </span>
+								<small class="degrees">°C | <a id="f" href="#">°F </a></small>
+							</p>
+						</div>
+						<div class="col-4">
+							<p id="description"></p>
+							<img
+								class="main-img"
+								src="http://openweathermap.org/img/wn/01d@2x.png"
+								alt="sunny"
+							/>
+							<ul>
+								<li><span class="humidity">Humidity: 29%</span></li>
 
-				<div class="row">
-					<div class="col-4">
-						<h1>Atlanta</h1>
-						<ul>
-							<li>Friday 05:00</li>
-							<li>Sunrise: 06:00</li>
-							<li>Sunset: 18:00</li>
-						</ul>
-					</div>
-					<div class="col-4 weather-temp">
-						<p>
-							<span class="temperature">12 </span>
-							<small class="degrees">°C | <a id="f" href="#">°F </a></small>
-						</p>
-					</div>
-					<div class="col-4">
-						<p>Clear Sky</p>
-						<img
-							src="http://openweathermap.org/img/wn/01d@2x.png"
-							alt="sunny"
-						/>
-						<ul>
-							<li>Humidity: 29% Wind Speed: 7 km/h</li>
-						</ul>
+								<li><span class="wind-speed">Wind Speed: 7 km/h</span></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="row forecast">

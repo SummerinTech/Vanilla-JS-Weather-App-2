@@ -1,14 +1,20 @@
-.weather-app {
-	max-width: 600px;
-	display: block;
-	margin: 20 auto;
-	padding: 20px;
-	border: 1px solid gray;
-	border-radius: 20px;
+h1 {
+	position: relative;
+	color: white;
+	font-size: 46px;
+	bottom: 20px;
+	right: 10px;
+	margin: 0;
+	padding: 0;
 }
 
-h1 {
-	color: pink;
+.current-city {
+	position: relative;
+	left: 20px;
+	bottom: 0.6px;
+	padding: 10px 14px;
+	background: palevioletred;
+	opacity: 0.8;
 }
 
 ul {
@@ -24,8 +30,14 @@ footer {
 	text-align: center;
 }
 
-.search {
-	display: inline;
+.weather-app {
+	background: pink;
+	max-width: 600px;
+	display: block;
+	margin: 20 auto;
+	padding: 20px;
+	border: 1px solid gray;
+	border-radius: 20px;
 }
 
 .forecast {
@@ -46,6 +58,56 @@ footer {
 	top: -32px;
 }
 
+.main-content {
+	padding: 30px;
+}
+
+.search {
+	background-color: palevioletred;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	padding: 10px 14px;
+	margin-left: -15px;
+	text-align: center;
+}
+
+.input-search {
+	position: relative;
+	border-radius: 5px;
+	border: none;
+	top: 3px;
+}
+
+.left-align {
+	margin: 0;
+	padding: 0;
+}
+
+.date {
+	position: relative;
+	bottom: 20px;
+	left: 15px;
+	font-size: 16px;
+}
+
+.sunrise {
+	position: relative;
+	left: 15px;
+	bottom: 10px;
+}
+
+.main-img {
+	display: block;
+	margin: 0;
+}
+
 #f {
 	text-decoration: none;
+}
+
+#description {
+	margin: 0;
+	text-transform: capitalize;
 }
