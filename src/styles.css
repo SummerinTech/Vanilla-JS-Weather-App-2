@@ -7,16 +7,6 @@ h1 {
 	padding: 0;
 }
 
-.current-city {
-	position: relative;
-	left: 20px;
-	top: 0.9px;
-	padding: 10px 14px;
-	background: #f3a8b3;
-	color: white;
-	opacity: 0.8;
-}
-
 ul {
 	margin: 0;
 	padding: 0;
@@ -24,7 +14,7 @@ ul {
 
 li {
 	list-style: none;
-	color: teal;
+	color: #43b3ae;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -32,6 +22,7 @@ small {
 	text-align: center;
 	display: block;
 	margin: 0 auto;
+	color: #ff9a9e;
 }
 
 .weather-app {
@@ -49,10 +40,22 @@ small {
 	border-radius: 20px;
 }
 
-.forecast {
+.current-city {
+	position: relative;
+	left: 20px;
+	top: 0.9px;
+	padding: 10px 14px;
+	background: #43b3ae;
 	color: white;
-	text-align: center;
-	padding: 20px;
+	opacity: 0.8;
+	border: 1px solid #43b3ae;
+	color: white;
+}
+.current-city:hover {
+	background: #ff9a9e;
+	color: white;
+	opacity: 0.8;
+	border: 1px solid #ff9a9e;
 }
 
 .temperature {
@@ -65,11 +68,11 @@ small {
 }
 
 .weather-temp small {
-	color: teal;
+	color: #43b3ae;
 	position: relative;
 	font-size: 16px;
 	top: -58px;
-	left: 20px;
+	left: 34px;
 }
 
 .main-content {
@@ -78,7 +81,7 @@ small {
 }
 
 .search {
-	background-color: #f3a8b3;
+	background-color: #43b3ae;
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
@@ -86,12 +89,21 @@ small {
 	padding: 10px 14px;
 	margin-left: -15px;
 	text-align: center;
+	color: white;
+	border: 1px solid #43b3ae;
+}
+
+.search:hover {
+	background: #ff9a9e;
+	color: white;
+	opacity: 0.8;
+	border: 1px solid #ff9a9e;
 }
 
 .input-search {
 	position: relative;
 	border-radius: 5px;
-	border: none;
+	border: 1px solid white;
 	top: 3px;
 }
 
@@ -102,7 +114,7 @@ small {
 
 .date {
 	position: relative;
-	bottom: 20px;
+	bottom: 15px;
 	font-size: 16px;
 }
 
@@ -117,14 +129,24 @@ small {
 	margin: 0 auto;
 }
 
+.forecast {
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
 .open-source {
 	text-decoration: none;
-	color: teal;
+	color: #43b3ae;
+}
+
+.open-source:hover {
+	color: #ff9a9e;
 }
 
 #f {
 	text-decoration: none;
-	color: teal;
+	color: #43b3ae;
 }
 
 #description {
