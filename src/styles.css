@@ -130,7 +130,6 @@ small {
 }
 
 .forecast {
-	color: white;
 	text-align: center;
 	padding: 20px;
 }
@@ -155,4 +154,28 @@ small {
 	font-size: 24px;
 	color: white;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#forecast-one {
+	color: white;
+}
+
+#forecast-two {
+	color: white;
+	text-align: center;
+}
+
+#forecast-three {
+	color: white;
+	text-align: center;
+}
+
+#forecast-four {
+	color: white;
+	text-align: center;
+}
+
+#forecast-five {
+	color: white;
+	text-align: center;
 }
