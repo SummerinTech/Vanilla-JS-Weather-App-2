@@ -45,13 +45,12 @@ function convertCelcius() {
 }
 
 function convertFahrenheit() {
-	let fahrenheitTemperature = Math.round(21 * 2 + 28);
 	temperature.innerHTML = `${fahrenheitTemperature}`;
 
-	let celcius = document.querySelector(".celcius");
-	let fahrenheit = document.querySelector(".fahrenheit");
+	// let celcius = document.querySelector("#celcius");
+	let fahrenheit = document.querySelector("#f");
 
-	celcius.addEventListener("click", convertCelcius);
+	// celcius.addEventListener("click", convertCelcius);
 	fahrenheit.addEventListener("click", convertFahrenheit);
 }
 
