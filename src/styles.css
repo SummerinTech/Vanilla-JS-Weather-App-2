@@ -68,7 +68,8 @@ small {
 }
 
 .active {
-	text-decoration: underline;
+	text-decoration: none;
+	cursor: default;
 }
 
 .weather-temp small {
@@ -148,7 +149,6 @@ small {
 }
 
 #f {
-	text-decoration: none;
 	color: #43b3ae;
 }
 
@@ -185,6 +185,5 @@ small {
 }
 
 #celcius {
-	text-decoration: none;
 	color: #43b3ae;
 }

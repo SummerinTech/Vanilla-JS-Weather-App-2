@@ -72,16 +72,16 @@ button.addEventListener("click", getCurrentLocation);
 
 function displayFahrenheitTemp(event) {
 	event.preventDefault();
-	celcius.classList.add("active");
-	fahrenheit.classList.remove("active");
+	celcius.classList.remove("active");
+	fahrenheit.classList.add("active");
 	let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
 	temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function dispalyCelciusTemp(event) {
 	event.preventDefault();
-	celcius.classList.remove("active");
-	fahrenheit.classList.add("active");
+	celcius.classList.add("active");
+	fahrenheit.classList.remove("active");
 	temperature.innerHTML = Math.round(celciusTemperature);
 }
 
