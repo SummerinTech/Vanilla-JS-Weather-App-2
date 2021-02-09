@@ -18,9 +18,9 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 function showTemperature(response) {
-	// console.log(response.data);
+	celciusTemperature = response.data.main.temp;
 	document.querySelector(".temperature").innerHTML = Math.round(
-		response.data.main.temp
+		celciusTemperature
 	);
 	document.querySelector("h1").innerHTML = response.data.name;
 	document.querySelector("#description").innerHTML =
@@ -31,27 +31,6 @@ function showTemperature(response) {
 	document.querySelector(".wind-speed").innerHTML = `
 		Wind Speed: ${Math.round(response.data.wind.speed)} km/h
 	`;
-}
-
-//setting up celcius to fahrenheit conversion
-
-let temperature = document.querySelector(".temperature");
-
-let celciusTemperature = Math.round(temperature);
-let fahrenheitTemperature = Math.round(celciusTemperature * 2 + 30);
-
-function convertCelcius() {
-	temperature.innerHTML = 21;
-}
-
-function convertFahrenheit() {
-	temperature.innerHTML = `${fahrenheitTemperature}`;
-
-	// let celcius = document.querySelector("#celcius");
-	let fahrenheit = document.querySelector("#f");
-
-	// celcius.addEventListener("click", convertCelcius);
-	fahrenheit.addEventListener("click", convertFahrenheit);
 }
 
 // current location button code
@@ -90,5 +69,28 @@ function getCurrentLocation(event) {
 
 let button = document.querySelector(".current-city");
 button.addEventListener("click", getCurrentLocation);
+
+function displayFahrenheitTemp(event) {
+	event.preventDefault();
+	celcius.classList.add("active");
+	fahrenheit.classList.remove("active");
+	let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+	temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function dispalyCelciusTemp(event) {
+	event.preventDefault();
+	celcius.classList.remove("active");
+	fahrenheit.classList.add("active");
+	temperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let celcius = document.querySelector("#celcius");
+let fahrenheit = document.querySelector("#f");
+let celciusTemperature = null;
+let temperature = document.querySelector(".temperature");
+
+fahrenheit.addEventListener("click", displayFahrenheitTemp);
+celcius.addEventListener("click", dispalyCelciusTemp);
 
 search("Tokyo");
