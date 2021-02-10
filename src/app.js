@@ -1,3 +1,34 @@
+//date code
+
+let date = document.querySelector(".date");
+
+let now = new Date();
+let dateCurrent = now.getDate();
+let year = now.getFullYear();
+
+let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let day = days[now.getDay()];
+let hour = now.getHours();
+let minute = now.getMinutes();
+
+let months = [
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec",
+];
+let month = months[now.getMonth()];
+
+date.innerHTML = `${day} ${month} ${dateCurrent}, ${year}  ${hour}:${minute}`;
+
 function search(city) {
 	let apiKey = "24029506eac6ecf0aabddf3cd4ab6120";
 	let units = "metric";
