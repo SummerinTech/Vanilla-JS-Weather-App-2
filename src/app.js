@@ -18,6 +18,12 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 function showTemperature(response) {
+	let weatherIcon = document.querySelector(".main-img");
+	weatherIcon.setAttribute(
+		"src",
+		`http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+	);
+	weatherIcon.setAttribute("alt", response.data.weather[0].description);
 	celciusTemperature = response.data.main.temp;
 	document.querySelector(".temperature").innerHTML = Math.round(
 		celciusTemperature
