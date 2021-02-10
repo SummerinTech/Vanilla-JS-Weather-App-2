@@ -14,7 +14,7 @@ ul {
 
 li {
 	list-style: none;
-	color: #43b3ae;
+	color: #389ba6;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -28,7 +28,7 @@ small {
 .weather-app {
 	background-image: linear-gradient(
 		to top,
-		#ff9a9e 0%,
+		#d96459 0%,
 		#fecfef 99%,
 		#fecfef 100%
 	);
@@ -45,10 +45,10 @@ small {
 	left: 20px;
 	top: 0.9px;
 	padding: 10px 14px;
-	background: #43b3ae;
+	background: #389ba6;
 	color: white;
 	opacity: 0.8;
-	border: 1px solid #43b3ae;
+	border: 1px solid #389ba6;
 	color: white;
 }
 .current-city:hover {
@@ -73,7 +73,7 @@ small {
 }
 
 .weather-temp small {
-	color: #43b3ae;
+	color: #389ba6;
 	position: relative;
 	font-size: 16px;
 	top: -58px;
@@ -86,7 +86,7 @@ small {
 }
 
 .search {
-	background-color: #43b3ae;
+	background-color: #389ba6;
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
@@ -95,7 +95,7 @@ small {
 	margin-left: -15px;
 	text-align: center;
 	color: white;
-	border: 1px solid #43b3ae;
+	border: 1px solid #389ba6;
 }
 
 .search:hover {
@@ -141,7 +141,7 @@ small {
 
 .open-source {
 	text-decoration: none;
-	color: #43b3ae;
+	color: #389ba6;
 }
 
 .open-source:hover {
@@ -149,7 +149,8 @@ small {
 }
 
 #f {
-	color: #43b3ae;
+	color: #389ba6;
+	font-weight: bold;
 }
 
 #description {
@@ -181,9 +182,8 @@ small {
 
 #forecast-five {
 	color: white;
-	text-align: center;
 }
 
 #celcius {
-	color: #43b3ae;
+	color: #389ba6;
 }
