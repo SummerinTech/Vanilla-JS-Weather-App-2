@@ -29,12 +29,38 @@ let month = months[now.getMonth()];
 
 date.innerHTML = `${day} ${month} ${dateCurrent}, ${year}  ${hour}:${minute}`;
 
+function formatHours(timestamp) {
+	return `${hours}:${minutes}`;
+}
+
+function showForecast(response) {
+	let forecastElement = document.querySelector("#forecast");
+	let forecast = response.data.list[0];
+	forecastElement.innerHTML = `	
+			<div class="col-2 4">
+				<h5 id="forecast-one"> 12:00 </h5>
+				<img src="https://openweathermap.org/img/wn/${
+					forecast.weather[0].icon
+				}.png" alt=" "/>
+					
+					<div class="weather-forecast-temperature">
+						<strong>${Math.round(forecast.main.temp_max)}</strong>°/${Math.round(
+		forecast.main.temp_min
+	)}°
+			</div>
+					</div>
+	`;
+}
+
 function search(city) {
 	let apiKey = "24029506eac6ecf0aabddf3cd4ab6120";
 	let units = "metric";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 	axios.get(apiUrl).then(showTemperature);
+
+	let apiForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+	axios.get(apiForecastUrl).then(showForecast);
 }
 
 function searchCity(event) {
