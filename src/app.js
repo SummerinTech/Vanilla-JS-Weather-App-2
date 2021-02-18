@@ -30,26 +30,42 @@ let month = months[now.getMonth()];
 date.innerHTML = `${day} ${month} ${dateCurrent}, ${year}  ${hour}:${minute}`;
 
 function formatHours(timestamp) {
-	return `${hours}:${minutes}`;
+	let dateForecast = new Date(timestamp);
+	let forecastHours = dateForecast.getHours();
+	if (forecastHours < 10) {
+		forecastHours = `0${forecastHours}`;
+	}
+
+	let forecastMinutes = dateForecast.getMinutes();
+	if (forecastMinutes < 10) {
+		forecastMinutes = `0${forecastMinutes}`;
+	}
+
+	return `${forecastHours}:${forecastMinutes}`;
 }
 
 function showForecast(response) {
 	let forecastElement = document.querySelector("#forecast");
-	let forecast = response.data.list[0];
-	forecastElement.innerHTML = `	
+	forecastElement.innerHTML = null;
+	let forecast = null;
+
+	for (let i = 0; i < 5; i++) {
+		forecast = response.data.list[i];
+		forecastElement.innerHTML += `	
 			<div class="col-2 4">
-				<h5 id="forecast-one"> 12:00 </h5>
+				<h5 id="forecast-one"> ${formatHours(forecast.dt * 1000)} </h5>
 				<img src="https://openweathermap.org/img/wn/${
 					forecast.weather[0].icon
 				}.png" alt=" "/>
 					
 					<div class="weather-forecast-temperature">
 						<strong>${Math.round(forecast.main.temp_max)}</strong>°/${Math.round(
-		forecast.main.temp_min
-	)}°
+			forecast.main.temp_min
+		)}°
 			</div>
 					</div>
 	`;
+	}
 }
 
 function search(city) {
