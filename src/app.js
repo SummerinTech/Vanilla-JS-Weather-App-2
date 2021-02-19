@@ -52,7 +52,7 @@ function showForecast(response) {
 	for (let i = 0; i < 5; i++) {
 		forecast = response.data.list[i];
 		forecastElement.innerHTML += `	
-			<div class="col-2 4">
+			<div class="col-2 inner-forecast 4">
 				<h5 id="forecast-one"> ${formatHours(forecast.dt * 1000)} </h5>
 				<img src="https://openweathermap.org/img/wn/${
 					forecast.weather[0].icon
@@ -91,6 +91,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 function showTemperature(response) {
+	console.log(response.data);
 	let weatherIcon = document.querySelector(".main-img");
 	weatherIcon.setAttribute(
 		"src",
@@ -106,9 +107,10 @@ function showTemperature(response) {
 		response.data.weather[0].description;
 	document.querySelector(
 		".humidity"
-	).innerHTML = ` Humidity: ${response.data.main.humidity}%`;
-	document.querySelector(".wind-speed").innerHTML = `
-		Wind Speed: ${Math.round(response.data.wind.speed)} km/h
+	).innerHTML = `Precipitation: ${response.data.main.humidity}%`;
+	document.querySelector(".wind-speed").innerHTML = `Wind Speed: ${Math.round(
+		response.data.wind.speed
+	)} km/h
 	`;
 }
 
@@ -128,6 +130,9 @@ function showCurrentTemperature(response) {
 
 	let updatedHumidity = document.querySelector(".humidity");
 	updatedHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+	// let precipitation = document.querySelector('.precipitation');
+	// precipitation.innerHTML= `Precipitation: ${response.data.main.}`
 }
 
 function retrievePosition(position) {

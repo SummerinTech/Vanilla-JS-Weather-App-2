@@ -8,8 +8,8 @@ h1 {
 }
 
 ul {
-	margin: 0;
-	padding: 0;
+	margin: 10px;
+	padding: 10px;
 }
 
 li {
@@ -18,10 +18,10 @@ li {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-small {
+footer {
 	text-align: center;
 	display: block;
-	margin: 0 auto;
+	margin-left: 15px;
 	color: #ff9a9e;
 }
 
@@ -64,7 +64,7 @@ small {
 	color: white;
 	font-weight: 400;
 	line-height: 1;
-	right: 30px;
+	right: 28px;
 }
 
 .active {
@@ -134,9 +134,11 @@ small {
 	margin: 0 auto;
 }
 
-.forecast {
+.inner-forecast {
+	position: relative;
 	text-align: center;
-	padding: 20px;
+	padding: 5px;
+	margin-left: 15px;
 }
 
 .open-source {
@@ -161,27 +163,8 @@ small {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#forecast-one {
-	color: white;
-}
-
-#forecast-two {
-	color: white;
-	text-align: center;
-}
-
-#forecast-three {
-	color: white;
-	text-align: center;
-}
-
-#forecast-four {
-	color: white;
-	text-align: center;
-}
-
-#forecast-five {
-	color: white;
+#forecast {
+	color: fff;
 }
 
 #celcius {
