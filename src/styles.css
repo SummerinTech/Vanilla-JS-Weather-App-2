@@ -5,6 +5,7 @@ h1 {
 	bottom: 20px;
 	margin: 0;
 	padding: 0;
+	max-width: 5px;
 }
 
 ul {
@@ -64,7 +65,8 @@ footer {
 	color: white;
 	font-weight: 400;
 	line-height: 1;
-	right: 28px;
+	left: 28px;
+	bottom: 15px;
 }
 
 .active {
@@ -76,7 +78,7 @@ footer {
 	color: #389ba6;
 	position: relative;
 	font-size: 16px;
-	top: -58px;
+	top: -50px;
 	left: 34px;
 }
 
@@ -96,6 +98,13 @@ footer {
 	text-align: center;
 	color: white;
 	border: 1px solid #389ba6;
+}
+
+.search:active {
+	background: #ff9a9e;
+	color: white;
+	opacity: 0.8;
+	border: 1px solid #ff9a9e;
 }
 
 .search:hover {
@@ -150,6 +159,10 @@ footer {
 	color: #ff9a9e;
 }
 
+.degrees {
+	position: relative;
+	top: -8px;
+}
 #f {
 	color: #389ba6;
 	font-weight: bold;
